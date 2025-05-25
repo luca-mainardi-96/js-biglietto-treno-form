@@ -32,9 +32,9 @@ formBiglietto.addEventListener('submit', function(e){
 
     // Calcolo prezzo finale
 
-    if (sconto === '20%'){
+    if (sconto === 'Sconto del 20%'){
         PrezzoFinale = prezzo - (prezzo*0.2)
-    } else if (sconto === '40%'){
+    } else if (sconto === 'Sconto del 40%'){
         PrezzoFinale = prezzo -(prezzo*.4)
     } else {
         PrezzoFinale = prezzo
