@@ -13,27 +13,25 @@
     </header>
     <main>
         <div class="container">
-            <form class="mb-3">
-                <div class="row">
-                    <div class="col-6">
-                        <input type="text" class="form-control mb-3" id="nome" placeholder="Inserisci il tuo nome">
-                        <input type="number" class="form-control mb-3" id="tratta" placeholder="Inserisci i km da percorrere (0.21&euro;/KM)">
-                        <button type="button" class="btn btn-primary" id="button">Invio dati</button>
-                    </div>
-                    <div class="col-6">
-                        <input type="text" class="form-control mb-3" id="cognome" placeholder="Inserisci il tuo cognome">
-                        <select class="form-select" aria-label="Default select example" id="sconto">
-                            <option value='' selected>Seleziona il tuo sconto</option>
-                            <option value="prezzo-intero">Prezzo intero</option>
-                            <option value="sconto-20">20% se sei uno studente</option>
-                            <option value="sconto-40">40% se sei over 65</option>
-                        </select>
-                    </div>
+            <form id="form" action="" class="mb-3 row">
+                <div class="col-6">
+                    <input type="text" class="form-control mb-3" id="nome" placeholder="Inserisci il tuo nome" >
+                    <input type="number" class="form-control mb-3" id="tratta" placeholder="Inserisci i km da percorrere (0.21&euro;/KM)" required>
+                </div>
+                <div class="col-6">
+                    <input type="text" class="form-control mb-3" id="cognome" placeholder="Inserisci il tuo cognome">
+                    <select class="form-select" aria-label="Default select example" id="sconto" required>
+                        <option value='' selected>Seleziona il tuo sconto</option>
+                        <option value="Nessuno">Prezzo intero</option>
+                        <option value="20%">20% se sei uno studente</option>
+                        <option value="40%">40% se sei over 65</option>
+                    </select>
+                </div>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-primary" id="button">Invio dati</button>
                 </div>
             </form>
-        </div>
-        <div class="container">
-            <div class="card text-center">
+            <div class="card text-center" id="biglietto">
                 <div class="card-header bg-primary">
                     <h5>Biglietto del treno</h5>
                 </div>
