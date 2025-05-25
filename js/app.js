@@ -21,3 +21,10 @@
 // stampare e vero e proprio biglietto con tutte le info del biglietto. Potete usare la creatività per la grafica e la UI.
 
 
+const inputNome = document.getElementById('nome')
+const inputCognome = document.getElementById('cognome')
+const inputTratta = document.getElementById('tratta')
+const selectSconto = document.getElementById('sconto')
+const button = document.getElementById('button')
+
+console.log(inputNome, inputCognome, inputTratta, selectSconto, button)
