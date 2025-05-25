@@ -16,7 +16,6 @@ const outputPrezzoFinale = document.getElementById('output-prezzo-finale')
 formBiglietto.addEventListener('submit', function(e){
     e.preventDefault()
 
-    //recuperare valori form
     const nome = inputNome.value
     const cognome = inputCognome.value
     const tratta = parseFloat(inputTratta.value)
@@ -30,9 +29,7 @@ formBiglietto.addEventListener('submit', function(e){
     let prezzo = tratta*0.21
     let PrezzoFinale = 0
 
-    // Calcolo prezzo finale
-
-    if (sconto === 'Sconto del 20%'){
+   if (sconto === 'Sconto del 20%'){
         PrezzoFinale = prezzo - (prezzo*0.2)
     } else if (sconto === 'Sconto del 40%'){
         PrezzoFinale = prezzo -(prezzo*.4)
@@ -40,19 +37,9 @@ formBiglietto.addEventListener('submit', function(e){
         PrezzoFinale = prezzo
     }
 
-
-    console.log(PrezzoFinale)
-    console.log(prezzo)
-    console.log(inputTratta)
-
-
-
-
-    //stampare nella card-biglietto
-
     outputNome.innerHTML = nome
     outputCognome.innerHTML = cognome
-    outputTratta.innerHTML = tratta
+    outputTratta.innerHTML = tratta + ' KM'
     outputSconto.innerHTML = sconto
     outputPrezzoFinale.innerHTML = PrezzoFinale.toFixed(2) + " €"
 
