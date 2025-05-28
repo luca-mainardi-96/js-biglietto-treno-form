@@ -21,12 +21,7 @@ formBiglietto.addEventListener('submit', function(e){
     const tratta = parseFloat(inputTratta.value)
     const sconto = selectSconto.value
 
-    if(isNaN(tratta)){
-        alert('Inserisci una distanza valida in KM')
-        return
-    }
-
-    if (tratta < 0){
+    if(isNaN(tratta) || tratta < 0){
         alert('Inserisci un numero valido')
         return
     }
