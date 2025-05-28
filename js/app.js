@@ -26,6 +26,11 @@ formBiglietto.addEventListener('submit', function(e){
         return
     }
 
+    if (tratta < 0){
+        alert('Inserisci un numero valido')
+        return
+    }
+
     let prezzo = tratta*0.21
     let PrezzoFinale = 0
 
